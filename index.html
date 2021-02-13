@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Live Earthquakes</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <!-- Boostrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css">
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- API key -->
+    <script type="text/javascript" src="static/js/config.js"></script>
+    <!-- JS -->
+    <script type="text/javascript" src="static/js/logic.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">United States Geological Survey
+                <span class="sr-only">(current)</span>
+              </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <hr style="color:lightgray; border-width: 3px;">
+    <div class="container">
+        <div class="card border-primary mb-3" style="max-width: 20rem;">
+            <div class="card-header">Filters By Timeframe</div>
+            <div class="card-body">
+                <select id="timeframe">
+                    <option value="all_hour">Past Hour</option>
+                    <option value="all_day">Past Day</option>
+                    <option value="all_week">Past 7 Days</option>
+                    <option value="all_month">Past 30 Days</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <hr style="color:lightgray; border-width: 3px;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 id="maptitle"></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" id="mapcontainer">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p><span><a href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php">Earthquake Data Source: USGS</a>     |          
+        <a href="https://github.com/fraxen/tectonicplates">Tectonic Plates Data Source: GitHub.com/Fraxen</a></span></p>
+      </footer>
+</body>
+
+</html>
