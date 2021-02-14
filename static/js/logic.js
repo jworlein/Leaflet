@@ -25,7 +25,7 @@ function makeMap() {
             // make second call for tectonic data (must be nested)
             $.ajax({
                 type: "GET",
-                url: "/static/data/PB2002_boundaries.json",
+                url: "/Leaflet/static/data/PB2002_boundaries.json",
                 success: function(tectonic) {
                     //Build map with both data sets
                     buildMap(data, tectonic);
